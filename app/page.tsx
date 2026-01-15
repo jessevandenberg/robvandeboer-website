@@ -4,7 +4,7 @@
 import Image, { type StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 
-import slideImageBathroom from "./images/homepage2.png";
+import slideImageBathroom from "./images/homepage3.png";
 import slideImageStairs from "./images/homepage1.png";
 
 type Slide = {
@@ -25,7 +25,7 @@ const slides: Slide[] = [
   },
   {
     id: 2,
-    title: "Vloeren en wanden die      spreken",
+    title: "Vloeren en wanden die spreken",
     subtitle: "",
     image: slideImageStairs,
     alt: "Trap met luxe marmeren tegels en verlichting",
