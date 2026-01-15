@@ -21,7 +21,9 @@ const OverOns: React.FC = () => {
             sizes="100vw"
           />
         </div>
-        <div className="absolute inset-0 flex items-center justify-center">
+        {/* Verduisterende overlay voor betere tekst leesbaarheid */}
+        <div className="absolute inset-0 bg-black/30 z-0"></div>
+        <div className="absolute inset-0 flex items-center justify-center z-20">
           <h1 className="text-4xl font-bold text-white drop-shadow-lg sm:text-5xl md:text-7xl lg:text-8xl">
             Over Ons
           </h1>
@@ -34,7 +36,7 @@ const OverOns: React.FC = () => {
               clipPath:
                 "polygon(0% 100%, 0% 35%, 5% 38%, 10% 42%, 20% 48%, 30% 55%, 40% 62%, 50% 70%, 60% 62%, 70% 55%, 80% 48%, 90% 42%, 95% 38%, 100% 35%, 100% 100%)",
             background:
-              "linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.6) 100%)",
+              "linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0.8) 100%)",
             backdropFilter: "blur(2px)",
           }}
         />

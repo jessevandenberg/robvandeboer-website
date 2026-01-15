@@ -10,7 +10,7 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="absolute inset-x-0 top-0 z-20 flex h-16 items-center justify-between bg-white/40 px-4 text-black backdrop-blur-sm md:h-20 md:px-8">
+    <header className="absolute inset-x-0 top-0 z-50 flex h-16 items-center justify-between bg-white/60 px-4 text-black backdrop-blur-sm md:h-20 md:px-8">
       <Link href="/" className="relative flex h-full items-end">
         <Image
           src={logoImage}
@@ -87,7 +87,7 @@ const Header: React.FC = () => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <nav className="absolute top-16 left-0 right-0 bg-white/95 backdrop-blur-sm border-t border-gray-200 md:hidden">
+        <nav className="absolute top-16 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-t border-gray-200 md:hidden">
           <div className="flex flex-col px-4 py-4 space-y-3">
             <Link
               href="/"
