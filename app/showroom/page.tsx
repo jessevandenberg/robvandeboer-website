@@ -7,7 +7,7 @@ import winkel1 from "../images/winkel 1.png";
 
 const Showroom: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-[#D9D9D9]">
       {/* Hero Section */}
       <section className="relative h-[70vh] w-full overflow-hidden md:h-[65vh]">
         <div className="absolute inset-0">
@@ -32,16 +32,16 @@ const Showroom: React.FC = () => {
           className="absolute bottom-0 left-0 right-0 z-10 h-[25vh] pointer-events-none"
           style={{
             clipPath:
-              "polygon(0% 100%, 0% 35%, 10% 40%, 20% 45%, 30% 50%, 40% 55%, 50% 60%, 60% 55%, 70% 50%, 80% 45%, 90% 40%, 100% 35%, 100% 100%)",
+              "polygon(0% 100%, 0% 35%, 5% 38%, 10% 42%, 20% 48%, 30% 55%, 40% 62%, 50% 70%, 60% 62%, 70% 55%, 80% 48%, 90% 42%, 95% 38%, 100% 35%, 100% 100%)",
             background:
-              "linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.35) 100%)",
+              "linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.6) 100%)",
             backdropFilter: "blur(2px)",
           }}
         />
       </section>
 
       {/* Eerste deel Content Sectie */}
-      <section className="bg-gray-100 py-20 px-4 md:py-32 md:px-8 lg:px-16">
+      <section className="bg-[#D9D9D9] py-20 px-4 md:py-32 md:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-16 md:grid-cols-2 md:items-center md:gap-24">
             <div>

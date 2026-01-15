@@ -1,12 +1,12 @@
 import Image from "next/image";
 
 import Footer from "../components/Footer";
-import buitenimage from "../images/buitenimage.png";
+import buitenimage from "../images/buitentegelhandel.png";
 import winkel1 from "../images/winkel 1.png";
 
 const Contact: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-[#D9D9D9]">
       {/* Hero Section */}
       <section className="relative h-[70vh] w-full overflow-hidden md:h-[65vh]">
         <div className="absolute inset-0">
@@ -30,17 +30,17 @@ const Contact: React.FC = () => {
         <div
           className="absolute bottom-0 left-0 right-0 z-10 h-[25vh] pointer-events-none"
           style={{
-            clipPath:
-              "polygon(0% 100%, 0% 35%, 10% 40%, 20% 45%, 30% 50%, 40% 55%, 50% 60%, 60% 55%, 70% 50%, 80% 45%, 90% 40%, 100% 35%, 100% 100%)",
+              clipPath:
+                "polygon(0% 100%, 0% 35%, 5% 38%, 10% 42%, 20% 48%, 30% 55%, 40% 62%, 50% 70%, 60% 62%, 70% 55%, 80% 48%, 90% 42%, 95% 38%, 100% 35%, 100% 100%)",
             background:
-              "linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.35) 100%)",
+              "linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.6) 100%)",
             backdropFilter: "blur(2px)",
           }}
         />
       </section>
 
       {/* Heeft u een vraag? Sectie */}
-      <section className="bg-gray-100 py-12 px-4 md:py-16 md:px-8 lg:px-16">
+      <section className="bg-[#D9D9D9] py-12 px-4 md:py-16 md:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <h2 className="mb-12 text-center text-3xl font-bold text-black md:mb-16 md:text-4xl lg:text-5xl">
             Heeft u een vraag?
@@ -125,7 +125,7 @@ const Contact: React.FC = () => {
       </section>
 
       {/* Showroom Informatie Sectie */}
-      <section className="bg-gray-100 py-12 px-4 md:py-16 md:px-8 lg:px-16">
+      <section className="bg-[#D9D9D9] py-12 px-4 md:py-16 md:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-2 md:items-start">
             {/* Afbeelding links */}

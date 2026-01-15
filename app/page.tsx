@@ -4,8 +4,8 @@
 import Image, { type StaticImageData } from "next/image";
 import { useEffect, useState } from "react";
 
-import slideImageBathroom from "./images/image 13.png";
-import slideImageStairs from "./images/image 19.png";
+import slideImageBathroom from "./images/homepage2.png";
+import slideImageStairs from "./images/homepage1.png";
 
 type Slide = {
   id: number;
@@ -25,7 +25,7 @@ const slides: Slide[] = [
   },
   {
     id: 2,
-    title: "Vloeren en wanden die spreken",
+    title: "Vloeren en wanden die      spreken",
     subtitle: "",
     image: slideImageStairs,
     alt: "Trap met luxe marmeren tegels en verlichting",
@@ -189,10 +189,10 @@ const Home: React.FC = () => {
       <div
         className="absolute bottom-0 left-0 right-0 z-10 h-[25vh] pointer-events-none"
         style={{
-          clipPath:
-            "polygon(0% 100%, 0% 35%, 10% 40%, 20% 45%, 30% 50%, 40% 55%, 50% 60%, 60% 55%, 70% 50%, 80% 45%, 90% 40%, 100% 35%, 100% 100%)",
+            clipPath:
+              "polygon(0% 100%, 0% 35%, 5% 38%, 10% 42%, 20% 48%, 30% 55%, 40% 62%, 50% 70%, 60% 62%, 70% 55%, 80% 48%, 90% 42%, 95% 38%, 100% 35%, 100% 100%)",
           background:
-            "linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.35) 100%)",
+            "linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.6) 100%)",
           backdropFilter: "blur(2px)",
         }}
       />

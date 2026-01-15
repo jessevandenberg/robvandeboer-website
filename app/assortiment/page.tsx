@@ -5,9 +5,9 @@ import { useState } from "react";
 
 import Footer from "../components/Footer";
 
-import buitenimage from "../images/buitenimage.png";
-import cottoceramix from "../images/cottoceramix.png";
-import delconca from "../images/delconca.png";
+import buitenimage from "../images/buitentegelhandel.png";
+import cottoceramix from "../images/cotteceramix.png";
+import delconca from "../images/delcona.png";
 import flaviker from "../images/flaviker.png";
 import mapei from "../images/mapei.png";
 import mosaic from "../images/mosaic.png";
@@ -15,7 +15,7 @@ import pastorelli from "../images/pastorelli.png";
 import ragno from "../images/ragno.png";
 import tmf from "../images/tmf.png";
 import vloertegels from "../images/vloertegels.png";
-import wandtegel from "../images/wandtegel.png";
+import wandtegel from "../images/muurtegels.png";
 import winkel1 from "../images/winkel 1.png";
 
 const Assortiment: React.FC = () => {
@@ -37,7 +37,7 @@ const Assortiment: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg#D9D9D9">
       {/* Hero Section met "assortiment" */}
       <section className="relative h-[70vh] w-full overflow-hidden md:h-[65vh]">
         <div className="absolute inset-0">
@@ -61,10 +61,10 @@ const Assortiment: React.FC = () => {
         <div
           className="absolute bottom-0 left-0 right-0 z-10 h-[25vh] pointer-events-none"
           style={{
-            clipPath:
-              "polygon(0% 100%, 0% 35%, 10% 40%, 20% 45%, 30% 50%, 40% 55%, 50% 60%, 60% 55%, 70% 50%, 80% 45%, 90% 40%, 100% 35%, 100% 100%)",
+              clipPath:
+                "polygon(0% 100%, 0% 35%, 5% 38%, 10% 42%, 20% 48%, 30% 55%, 40% 62%, 50% 70%, 60% 62%, 70% 55%, 80% 48%, 90% 42%, 95% 38%, 100% 35%, 100% 100%)",
             background:
-              "linear-gradient(to bottom, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.25) 50%, rgba(255, 255, 255, 0.35) 100%)",
+              "linear-gradient(to bottom, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0.6) 100%)",
             backdropFilter: "blur(2px)",
           }}
         />
@@ -138,7 +138,7 @@ const Assortiment: React.FC = () => {
       </section>
 
       {/* Dealerschappen Sectie */}
-      <section className="bg-gray-50 py-12 px-4 md:py-16 md:px-8 lg:px-16">
+      <section className="bg-[#D9D9D9] py-12 px-4 md:py-16 md:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <h2 className="mb-4 text-4xl font-bold text-black md:text-5xl">
             Dealerschappen
@@ -309,7 +309,7 @@ const Assortiment: React.FC = () => {
       </section>
 
       {/* Kom bij ons langs Sectie */}
-      <section className="bg-gray-50 py-12 px-4 md:py-16 md:px-8 lg:px-16">
+      <section className="bg-[#D9D9D9] py-12 px-4 md:py-16 md:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <h2 className="mb-4 text-4xl font-bold text-black md:text-5xl">
             Kom bij ons langs
