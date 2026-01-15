@@ -26,7 +26,7 @@ const slides: Slide[] = [
   {
     id: 2,
     title: "Vloeren en wanden die spreken",
-    subtitle:"",
+    subtitle: "",
     image: slideImageStairs,
     alt: "Trap met luxe marmeren tegels en verlichting",
   },
@@ -201,4 +201,3 @@ const Home: React.FC = () => {
 };
 
 export default Home;
-
