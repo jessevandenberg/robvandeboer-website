@@ -15,32 +15,38 @@ const Header: React.FC = () => {
         />
       </Link>
 
-      <nav className="flex items-center gap-4 text-sm font-medium uppercase tracking-wide md:gap-6 md:text-base">
-        <Link
-          href="/assortiment"
-          className="transition-colors hover:text-gray-700"
-        >
-          assortiment
-        </Link>
-        <Link
-          href="/showroom"
-          className="transition-colors hover:text-gray-700"
-        >
-          showroom
-        </Link>
-        <Link
-          href="/over-ons"
-          className="transition-colors hover:text-gray-700"
-        >
-          over ons
-        </Link>
-        <Link
-          href="/contact"
-          className="transition-colors hover:text-gray-700"
-        >
-          contact
-        </Link>
-      </nav>
+          <nav className="flex items-center gap-4 text-sm font-medium uppercase tracking-wide md:gap-6 md:text-base">
+            <Link
+              href="/"
+              className="transition-colors hover:text-gray-700"
+            >
+              home
+            </Link>
+            <Link
+              href="/assortiment"
+              className="transition-colors hover:text-gray-700"
+            >
+              assortiment
+            </Link>
+            <Link
+              href="/showroom"
+              className="transition-colors hover:text-gray-700"
+            >
+              showroom
+            </Link>
+            <Link
+              href="/over-ons"
+              className="transition-colors hover:text-gray-700"
+            >
+              over ons
+            </Link>
+            <Link
+              href="/contact"
+              className="transition-colors hover:text-gray-700"
+            >
+              contact
+            </Link>
+          </nav>
     </header>
   );
 };

@@ -40,42 +40,46 @@ const Showroom: React.FC = () => {
         />
       </section>
 
-      {/* Groot assortiment Sectie */}
-      <section className="bg-gray-100 py-12 px-4 md:py-16 md:px-8 lg:px-16">
+      {/* Eerste deel Content Sectie */}
+      <section className="bg-gray-100 py-20 px-4 md:py-32 md:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
-          <div className="max-w-4xl">
-            <h2 className="mb-8 text-3xl font-bold text-black md:mb-10 md:text-4xl lg:text-5xl">
-              Groot assortiment
-            </h2>
-            <div className="space-y-6 text-base leading-relaxed text-gray-700 md:text-lg md:leading-8">
-              <p>
-                Onze showroom biedt een uitgebreide collectie keramische wandtegels,
-                vloertegels en mozaïek. Wij zijn gespecialiseerd in keramische
-                tegels, niet in natuursteen. Ons assortiment is zeer gevarieerd en
-                loopt uiteen van klein tot groot formaat, klassiek tot modern en
-                subtiel tot opvallend. Onze tegels worden geleverd door gerenommeerde
-                fabrikanten uit Italië, Spanje, Portugal, Duitsland en de Emiraten.
-                De collectie wordt op een overzichtelijke manier gepresenteerd.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Grote voorraad Sectie */}
-      <section className="bg-gray-100 py-12 px-4 md:py-16 md:px-8 lg:px-16">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 md:grid-cols-2 md:items-center">
+          <div className="grid gap-16 md:grid-cols-2 md:items-center md:gap-24">
             <div>
-              <h2 className="mb-6 text-3xl font-bold text-black md:mb-8 md:text-4xl lg:text-5xl">
-                Grote voorraad
-              </h2>
-              <div className="space-y-6 text-base leading-relaxed text-gray-700 md:text-lg md:leading-8">
-                <p>
-                  Het grootste deel van onze collectie houden we op voorraad voor
-                  directe levering. Artikelen die u uit de catalogus bestelt, worden
-                  ook snel geleverd.
-                </p>
+              <div className="space-y-10 text-base leading-loose text-gray-700 md:text-lg md:leading-9">
+                <div>
+                  <h3 className="mb-3 text-xl font-semibold text-black md:text-2xl">
+                    Groot assortiment
+                  </h3>
+                  <p>
+                    Onze showroom biedt een uitgebreide collectie keramische wandtegels,
+                    vloertegels en mozaïek. Wij zijn gespecialiseerd in keramische
+                    tegels, niet in natuursteen. Ons assortiment is zeer gevarieerd en
+                    loopt uiteen van klein tot groot formaat, klassiek tot modern en
+                    subtiel tot opvallend. Onze tegels worden geleverd door gerenommeerde
+                    fabrikanten uit Italië, Spanje, Portugal, Duitsland en de Emiraten.
+                    De collectie wordt op een overzichtelijke manier gepresenteerd.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="mb-3 text-xl font-semibold text-black md:text-2xl">
+                    Grote voorraad
+                  </h3>
+                  <p>
+                    Het grootste deel van onze collectie houden we op voorraad voor
+                    directe levering. Artikelen die u uit de catalogus bestelt, worden
+                    ook snel geleverd.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="mb-3 text-xl font-semibold text-black md:text-2xl">
+                    Monster meenemen
+                  </h3>
+                  <p>
+                    Hoewel wij beschikken over speciale daglichtlampen om tegels te
+                    beoordelen, is de beste beoordeling toch thuis te maken. Wij raden
+                    u daarom aan om monsters mee te nemen.
+                  </p>
+                </div>
               </div>
             </div>
             <div className="relative h-96 overflow-hidden rounded-lg md:h-[500px]">
@@ -91,28 +95,10 @@ const Showroom: React.FC = () => {
         </div>
       </section>
 
-      {/* Monster meenemen Sectie */}
-      <section className="bg-gray-100 py-12 px-4 md:py-16 md:px-8 lg:px-16">
+      {/* Tweede deel Content Sectie met grijze achtergrond */}
+      <section className="bg-[#D9D9D9] py-20 px-4 md:py-32 md:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
-          <div className="max-w-4xl">
-            <h2 className="mb-8 text-3xl font-bold text-black md:mb-10 md:text-4xl lg:text-5xl">
-              Monster meenemen
-            </h2>
-            <div className="space-y-6 text-base leading-relaxed text-gray-700 md:text-lg md:leading-8">
-              <p>
-                Hoewel wij beschikken over speciale daglichtlampen om tegels te
-                beoordelen, is de beste beoordeling toch thuis te maken. Wij raden
-                u daarom aan om monsters mee te nemen.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Acties Sectie */}
-      <section className="bg-gray-100 py-12 px-4 md:py-16 md:px-8 lg:px-16">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-8 md:grid-cols-2 md:items-center">
+          <div className="grid gap-16 md:grid-cols-2 md:items-center md:gap-24">
             <div className="relative h-96 overflow-hidden rounded-lg md:h-[500px]">
               <Image
                 src={showroom1}
@@ -123,34 +109,38 @@ const Showroom: React.FC = () => {
               />
             </div>
             <div>
-              <h2 className="mb-6 text-3xl font-bold text-black md:mb-8 md:text-4xl lg:text-5xl">
-                Acties
-              </h2>
-              <div className="space-y-6 text-base leading-relaxed text-gray-700 md:text-lg md:leading-8">
-                <p>
-                  Kom regelmatig een kijkje nemen in onze actiehoek. Hier vindt u
-                  altijd scherpe deals op uitstekende restanten en overproductie van
-                  onze leveranciers.
-                </p>
+              <div className="space-y-10 text-base leading-loose text-gray-700 md:text-lg md:leading-9">
+                <div>
+                  <h3 className="mb-3 text-xl font-semibold text-black md:text-2xl">
+                    Acties
+                  </h3>
+                  <p>
+                    Kom regelmatig een kijkje nemen in onze actiehoek. Hier vindt u
+                    altijd scherpe deals op uitstekende restanten en overproductie van
+                    onze leveranciers.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="mb-3 text-xl font-semibold text-black md:text-2xl">
+                    Schoonmaakmiddelen
+                  </h3>
+                  <p>
+                    Het onderhouden van uw tegels is belangrijk voor zowel het uiterlijk
+                    als de levensduur. Wij verkopen gespecialiseerde schoonmaakmiddelen
+                    en geven graag advies over het schoonmaken van uw tegels.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="mb-3 text-xl font-semibold text-black md:text-2xl">
+                    Monster meenemen
+                  </h3>
+                  <p>
+                    Hoewel wij beschikken over speciale daglichtlampen om tegels te
+                    beoordelen, is de beste beoordeling toch thuis te maken. Wij raden
+                    u daarom aan om monsters mee te nemen.
+                  </p>
+                </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Schoonmaakmiddelen Sectie */}
-      <section className="bg-gray-100 py-12 px-4 md:py-16 md:px-8 lg:px-16">
-        <div className="mx-auto max-w-7xl">
-          <div className="max-w-4xl">
-            <h2 className="mb-8 text-3xl font-bold text-black md:mb-10 md:text-4xl lg:text-5xl">
-              Schoonmaakmiddelen
-            </h2>
-            <div className="space-y-6 text-base leading-relaxed text-gray-700 md:text-lg md:leading-8">
-              <p>
-                Het onderhouden van uw tegels is belangrijk voor zowel het uiterlijk
-                als de levensduur. Wij verkopen gespecialiseerde schoonmaakmiddelen
-                en geven graag advies over het schoonmaken van uw tegels.
-              </p>
             </div>
           </div>
         </div>
