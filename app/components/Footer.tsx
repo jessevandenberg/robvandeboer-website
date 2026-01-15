@@ -56,8 +56,8 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 border-t border-gray-700 pt-8 text-center text-sm">
-          <p>COPYRIGHT 2026 | Rob de boer | E: info@robvandeboer.nl</p>
+        <div className="mt-8 border-t border-gray-700 pt-8 text-center text-xs md:text-sm">
+          <p className="break-words">COPYRIGHT 2026 | Rob de boer | E: info@robvandeboer.nl</p>
         </div>
       </div>
     </footer>

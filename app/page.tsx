@@ -154,9 +154,9 @@ const Home: React.FC = () => {
       </button>
 
       {/* Hoofdcontent */}
-      <main className="relative z-10 flex h-full w-full flex-col justify-center px-6 md:px-16 lg:px-24">
-        <div className="max-w-4xl ml-8 md:ml-16 lg:ml-24">
-          <h1 className="text-4xl font-bold leading-tight text-white drop-shadow-lg md:text-5xl lg:text-6xl">
+      <main className="relative z-10 flex h-full w-full flex-col justify-center px-4 md:px-16 lg:px-24">
+        <div className="max-w-4xl ml-4 md:ml-16 lg:ml-24">
+          <h1 className="text-3xl font-bold leading-tight text-white drop-shadow-lg sm:text-4xl md:text-5xl lg:text-6xl">
             {activeSlide.title === "Vloeren en wanden die spreken" ? (
               <>
                 Vloeren en wanden die<br />
@@ -167,7 +167,7 @@ const Home: React.FC = () => {
             )}
           </h1>
           {activeSlide.subtitle && (
-            <p className="mt-4 text-xl font-medium text-white drop-shadow-md md:text-2xl">
+            <p className="mt-4 text-lg font-medium text-white drop-shadow-md sm:text-xl md:text-2xl">
               {activeSlide.subtitle}
             </p>
           )}
@@ -175,7 +175,7 @@ const Home: React.FC = () => {
       </main>
 
       {/* Dots onderin */}
-      <div className="pointer-events-auto absolute inset-x-0 bottom-24 z-40 flex items-center justify-center gap-2">
+      <div className="pointer-events-auto absolute inset-x-0 bottom-16 z-40 flex items-center justify-center gap-2 md:bottom-24">
         {slides.map((slide, index) => {
           const isActive = index === currentIndex;
 

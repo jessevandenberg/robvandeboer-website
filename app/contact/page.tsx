@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
           />
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-5xl font-bold text-white drop-shadow-lg md:text-7xl lg:text-8xl">
+          <h1 className="text-4xl font-bold text-white drop-shadow-lg sm:text-5xl md:text-7xl lg:text-8xl">
             contact
           </h1>
         </div>

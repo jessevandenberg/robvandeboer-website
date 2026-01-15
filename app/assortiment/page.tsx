@@ -52,7 +52,7 @@ const Assortiment: React.FC = () => {
           />
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-5xl font-bold text-white drop-shadow-lg md:text-7xl lg:text-8xl">
+          <h1 className="text-4xl font-bold text-white drop-shadow-lg sm:text-5xl md:text-7xl lg:text-8xl">
             assortiment
           </h1>
         </div>
@@ -71,15 +71,15 @@ const Assortiment: React.FC = () => {
       </section>
 
       {/* Ons Assortiment Sectie */}
-      <section className="bg-white py-12 px-4 md:py-16 md:px-8 lg:px-16">
+      <section className="bg-white py-16 px-4 md:py-24 md:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
-          <h2 className="mb-8 text-3xl font-bold text-black md:mb-12 md:text-4xl lg:text-5xl">
+          <h2 className="mb-12 text-3xl font-bold text-black md:mb-16 md:text-4xl lg:text-5xl">
             Ons Assortiment
           </h2>
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 md:gap-12 md:grid-cols-3">
             {/* Vloertegels Card */}
             <div className="overflow-hidden rounded-lg bg-white shadow-lg">
-              <div className="relative h-64">
+              <div className="relative h-48 md:h-64">
                 <Image
                   src={vloertegels}
                   alt="Vloertegels"
@@ -88,9 +88,9 @@ const Assortiment: React.FC = () => {
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="mb-2 text-xl font-semibold">Vloertegels</h3>
-                <p className="text-gray-600">
+              <div className="p-6 md:p-8">
+                <h3 className="mb-3 text-lg font-semibold md:mb-4 md:text-xl">Vloertegels</h3>
+                <p className="text-sm text-gray-600 md:text-base">
                   Duurzame en stijlvolle vloertegels voor elke ruimte
                 </p>
               </div>
@@ -98,7 +98,7 @@ const Assortiment: React.FC = () => {
 
             {/* Wandtegels Card */}
             <div className="overflow-hidden rounded-lg bg-white shadow-lg">
-              <div className="relative h-64">
+              <div className="relative h-48 md:h-64">
                 <Image
                   src={wandtegel}
                   alt="Wandtegels"
@@ -107,9 +107,9 @@ const Assortiment: React.FC = () => {
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="mb-2 text-xl font-semibold">Wandtegels</h3>
-                <p className="text-gray-600">
+              <div className="p-6 md:p-8">
+                <h3 className="mb-3 text-lg font-semibold md:mb-4 md:text-xl">Wandtegels</h3>
+                <p className="text-sm text-gray-600 md:text-base">
                   Elegante wandtegels die uw interieur transformeren
                 </p>
               </div>
@@ -117,7 +117,7 @@ const Assortiment: React.FC = () => {
 
             {/* Mozaïek Card */}
             <div className="overflow-hidden rounded-lg bg-white shadow-lg">
-              <div className="relative h-64">
+              <div className="relative h-48 md:h-64">
                 <Image
                   src={mosaic}
                   alt="Mozaïek"
@@ -126,9 +126,9 @@ const Assortiment: React.FC = () => {
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
-              <div className="p-6">
-                <h3 className="mb-2 text-xl font-semibold">Mozaïek</h3>
-                <p className="text-gray-600">
+              <div className="p-6 md:p-8">
+                <h3 className="mb-3 text-lg font-semibold md:mb-4 md:text-xl">Mozaïek</h3>
+                <p className="text-sm text-gray-600 md:text-base">
                   Creatieve mozaïektegels voor unieke accenten
                 </p>
               </div>
@@ -138,29 +138,29 @@ const Assortiment: React.FC = () => {
       </section>
 
       {/* Dealerschappen Sectie */}
-      <section className="bg-[#D9D9D9] py-12 px-4 md:py-16 md:px-8 lg:px-16">
+      <section className="bg-[#D9D9D9] py-16 px-4 md:py-24 md:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
-          <h2 className="mb-4 text-4xl font-bold text-black md:text-5xl">
+          <h2 className="mb-8 text-4xl font-bold text-black md:text-5xl">
             Dealerschappen
           </h2>
-          <p className="mb-12 max-w-3xl text-lg text-gray-900">
+          <p className="mb-16 max-w-3xl text-lg text-gray-900">
             Wij werken samen met een zorgvuldig geselecteerd netwerk van
             gespecialiseerde dealers. Zij staan garant voor kwaliteit, service
             en vakmanschap.
           </p>
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 md:gap-12 md:grid-cols-3">
             {/* CX cottoceramix */}
-            <div className="rounded-lg bg-white p-6 shadow-md">
-              <div className="relative mb-4 h-16 w-32">
+            <div className="flex flex-col rounded-lg bg-white p-6 shadow-md md:p-10">
+              <div className="relative mb-6 h-24 w-full md:mb-8 md:h-32">
                 <Image
                   src={cottoceramix}
                   alt="CX cottoceramix logo"
                   fill
                   className="object-contain"
-                  sizes="128px"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
-              <p className="mb-4 text-sm text-gray-600">
+              <p className="mb-6 grow text-sm text-gray-600">
                 Tegeldealer Cottoceramix levert een zorgvuldig samengesteld
                 assortiment keramische tegels, met focus op kwaliteit en
                 betrouwbaarheid.
@@ -179,17 +179,17 @@ const Assortiment: React.FC = () => {
             </div>
 
             {/* TMF the Mosaic factory */}
-            <div className="rounded-lg bg-white p-6 shadow-md">
-              <div className="relative mb-4 h-16 w-32">
+            <div className="flex flex-col rounded-lg bg-white p-6 shadow-md md:p-10">
+              <div className="relative mb-6 h-24 w-full md:mb-8 md:h-32">
                 <Image
                   src={tmf}
                   alt="TMF the Mosaic factory logo"
                   fill
                   className="object-contain"
-                  sizes="128px"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
-              <p className="mb-4 text-sm text-gray-600">
+              <p className="mb-6 grow text-sm text-gray-600">
                 The Mosaic Factory levert een uitgebreid, zorgvuldig geselecteerd
                 assortiment mozaïektegels van hoge kwaliteit en vakmanschap.
               </p>
@@ -207,17 +207,17 @@ const Assortiment: React.FC = () => {
             </div>
 
             {/* MAPEI */}
-            <div className="rounded-lg bg-white p-6 shadow-md">
-              <div className="relative mb-4 h-16 w-32">
+            <div className="flex flex-col rounded-lg bg-white p-6 shadow-md md:p-10">
+              <div className="relative mb-6 h-24 w-full md:mb-8 md:h-32">
                 <Image
                   src={mapei}
                   alt="MAPEI logo"
                   fill
                   className="object-contain"
-                  sizes="128px"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
-              <p className="mb-4 text-sm text-gray-600">
+              <p className="mb-6 grow text-sm text-gray-600">
                 Mapei levert hoogwaardige bouw- en tegelproducten, gespecialiseerd
                 in lijmen, voegen en duurzame oplossingen voor tegels.
               </p>
@@ -238,9 +238,9 @@ const Assortiment: React.FC = () => {
       </section>
 
       {/* Onze Merken Sectie */}
-      <section className="bg-white py-12 px-4 md:py-16 md:px-8 lg:px-16">
+      <section className="bg-white py-20 px-4 md:py-32 md:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
-          <h2 className="mb-8 text-4xl font-bold text-black md:text-5xl">
+          <h2 className="mb-16 text-4xl font-bold text-black md:text-5xl">
             onze merken
           </h2>
           <div className="relative">
@@ -264,7 +264,7 @@ const Assortiment: React.FC = () => {
                 />
               </svg>
             </button>
-            <div className="flex items-center justify-center gap-8 overflow-hidden">
+            <div className="flex items-center justify-center gap-8 overflow-hidden md:gap-16">
               {brands.map((brand, index) => (
                 <div
                   key={brand.name}
@@ -272,13 +272,13 @@ const Assortiment: React.FC = () => {
                     index === brandIndex ? "opacity-100" : "opacity-50"
                   }`}
                 >
-                  <div className="relative h-24 w-32 flex items-center justify-center rounded">
+                  <div className="relative h-20 w-24 flex items-center justify-center rounded md:h-32 md:w-40">
                     <Image
                       src={brand.logo}
                       alt={`${brand.name} logo`}
                       fill
                       className="object-contain"
-                      sizes="128px"
+                      sizes="(max-width: 768px) 96px, 160px"
                     />
                   </div>
                 </div>
@@ -309,16 +309,16 @@ const Assortiment: React.FC = () => {
       </section>
 
       {/* Kom bij ons langs Sectie */}
-      <section className="bg-[#D9D9D9] py-12 px-4 md:py-16 md:px-8 lg:px-16">
+      <section className="bg-[#D9D9D9] py-16 px-4 md:py-24 md:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
-          <h2 className="mb-4 text-4xl font-bold text-black md:text-5xl">
+          <h2 className="mb-8 text-4xl font-bold text-black md:text-5xl">
             Kom bij ons langs
           </h2>
-          <p className="mb-8 text-lg text-gray-900">
+          <p className="mb-12 text-lg text-gray-900">
             Bezoek onze showroom en ontdek zelf ons uitgebreide assortiment
             tegels en producten van topkwaliteit.
           </p>
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-12 md:grid-cols-2">
             <div className="relative h-64 overflow-hidden rounded-lg md:h-80">
               <Image
                 src={buitenimage}
@@ -329,8 +329,8 @@ const Assortiment: React.FC = () => {
               />
             </div>
             <div>
-              <h3 className="mb-4 text-2xl font-semibold">openingstijden</h3>
-              <div className="space-y-2 text-gray-900">
+              <h3 className="mb-6 text-2xl font-semibold">openingstijden</h3>
+              <div className="space-y-3 text-gray-900">
                 <div className="flex justify-between">
                   <span>maandag</span>
                   <span>13:00-17:30</span>
@@ -360,7 +360,7 @@ const Assortiment: React.FC = () => {
                   <span>gesloten</span>
                 </div>
               </div>
-              <p className="mt-6 text-gray-900">
+              <p className="mt-8 text-gray-900">
                 Adres: Kantsingel 10, 5349 AJ Oss
               </p>
             </div>
