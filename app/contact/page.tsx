@@ -6,7 +6,7 @@ import winkel1 from "../images/winkel 1.png";
 
 const Contact: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#D9D9D9]">
+    <div className="min-h-screen bg-gray-100">
       {/* Hero Section */}
       <section className="relative h-[70vh] w-full overflow-hidden md:h-[65vh]">
         <div className="absolute inset-0">
@@ -40,7 +40,7 @@ const Contact: React.FC = () => {
       </section>
 
       {/* Heeft u een vraag? Sectie */}
-      <section className="bg-[#D9D9D9] py-12 px-4 md:py-16 md:px-8 lg:px-16">
+      <section className="bg-gray-100 py-12 px-4 md:py-16 md:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <h2 className="mb-12 text-center text-3xl font-bold text-black md:mb-16 md:text-4xl lg:text-5xl">
             Heeft u een vraag?
@@ -125,7 +125,7 @@ const Contact: React.FC = () => {
       </section>
 
       {/* Showroom Informatie Sectie */}
-      <section className="bg-[#D9D9D9] py-12 px-4 md:py-16 md:px-8 lg:px-16">
+      <section className="bg-gray-100 py-12 px-4 md:py-16 md:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-2 md:items-start">
             {/* Afbeelding links */}

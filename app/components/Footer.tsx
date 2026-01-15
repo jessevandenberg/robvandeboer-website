@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#D9D9D9] text-black">
+    <footer className="bg-gray-800 text-white">
       <div className="mx-auto max-w-7xl px-4 py-12 md:px-8 lg:px-16">
         <div className="grid gap-8 md:grid-cols-3">
           {/* Sitemap */}
@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="mt-8 border-t border-gray-400 pt-8 text-center text-sm">
+        <div className="mt-8 border-t border-gray-700 pt-8 text-center text-sm">
           <p>COPYRIGHT 2026 | Rob de boer | E: info@robvandeboer.nl</p>
         </div>
       </div>

@@ -7,7 +7,7 @@ import winkel1 from "../images/winkel 1.png";
 
 const OverOns: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#D9D9D9]">
+    <div className="min-h-screen bg-gray-100">
       {/* Hero Section */}
       <section className="relative h-[70vh] w-full overflow-hidden md:h-[65vh]">
         <div className="absolute inset-0">
@@ -41,7 +41,7 @@ const OverOns: React.FC = () => {
       </section>
 
       {/* Eerste deel Content Sectie */}
-      <section className="bg-[#D9D9D9] py-20 px-4 md:py-32 md:px-8 lg:px-16">
+      <section className="bg-gray-100 py-20 px-4 md:py-32 md:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-16 md:grid-cols-2 md:items-center md:gap-24">
             <div>
