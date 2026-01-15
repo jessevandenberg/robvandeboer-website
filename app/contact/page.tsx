@@ -125,7 +125,7 @@ const Contact: React.FC = () => {
       </section>
 
       {/* Showroom Informatie Sectie */}
-      <section className="bg-gray-100 py-12 px-4 md:py-16 md:px-8 lg:px-16">
+      <section className="bg-[#D9D9D9] py-12 px-4 md:py-16 md:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-2 md:items-start">
             {/* Afbeelding links */}
