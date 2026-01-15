@@ -45,7 +45,7 @@ const OverOns: React.FC = () => {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-16 md:grid-cols-2 md:items-center md:gap-24">
             <div>
-              <div className="space-y-10 text-base leading-loose text-gray-700 md:text-lg md:leading-9">
+              <div className="space-y-10 text-base leading-loose text-gray-900 md:text-lg md:leading-9">
                 <div>
                   <h3 className="mb-3 text-xl font-semibold text-black md:text-2xl">
                     Van Tegelboerke tot superspecialist
@@ -98,7 +98,7 @@ const OverOns: React.FC = () => {
               />
             </div>
             <div>
-              <div className="space-y-10 text-base leading-loose text-gray-700 md:text-lg md:leading-9">
+              <div className="space-y-10 text-base leading-loose text-gray-900 md:text-lg md:leading-9">
                 <div>
                   <h3 className="mb-3 text-xl font-semibold text-black md:text-2xl">
                     Advies en service

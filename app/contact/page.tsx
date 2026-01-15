@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
               <h3 className="mb-2 text-xl font-bold text-black md:text-2xl">
                 bel ons
               </h3>
-              <p className="text-base leading-relaxed text-gray-700 md:text-lg">
+              <p className="text-base leading-relaxed text-gray-900 md:text-lg">
                 Tijdens openingstijden zijn wij bereikbaar op 0412-622720
               </p>
             </div>
@@ -91,7 +91,7 @@ const Contact: React.FC = () => {
               <h3 className="mb-2 text-xl font-bold text-black md:text-2xl">
                 mail ons
               </h3>
-              <p className="text-base leading-relaxed text-gray-700 md:text-lg">
+              <p className="text-base leading-relaxed text-gray-900 md:text-lg">
                 Of mail ons en krijg binnen 24 uur reactie.
               </p>
             </div>
@@ -116,7 +116,7 @@ const Contact: React.FC = () => {
               <h3 className="mb-2 text-xl font-bold text-black md:text-2xl">
                 showroom
               </h3>
-              <p className="text-base leading-relaxed text-gray-700 md:text-lg">
+              <p className="text-base leading-relaxed text-gray-900 md:text-lg">
                 Bezoek onze showroom. Kom langs zonder afspraak.
               </p>
             </div>
@@ -144,7 +144,7 @@ const Contact: React.FC = () => {
               <h2 className="mb-6 text-3xl font-bold text-black md:text-4xl lg:text-5xl">
                 showroom
               </h2>
-              <div className="space-y-4 text-base leading-relaxed text-gray-700 md:text-lg">
+              <div className="space-y-4 text-base leading-relaxed text-gray-900 md:text-lg">
                 {/* Telefoon */}
                 <div className="flex items-start gap-3">
                   <svg

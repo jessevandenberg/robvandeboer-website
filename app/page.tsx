@@ -18,15 +18,15 @@ type Slide = {
 const slides: Slide[] = [
   {
     id: 1,
-    title: "Breng Klasse in Huis",
-    subtitle: "Tegels met Karakter",
+    title: "Vloeren en wanden die spreken",
+    subtitle: "",
     image: slideImageBathroom,
     alt: "Badkamer met groene tegels en houten wastafelmeubel",
   },
   {
     id: 2,
-    title: "Vloeren en wanden die spreken",
-    subtitle: "",
+    title: "Breng Klasse in Huis",
+    subtitle: "Tegels met Karakter",
     image: slideImageStairs,
     alt: "Trap met luxe marmeren tegels en verlichting",
   },
@@ -156,12 +156,21 @@ const Home: React.FC = () => {
       {/* Hoofdcontent */}
       <main className="relative z-10 flex h-full w-full flex-col justify-center px-6 md:px-16 lg:px-24">
         <div className="max-w-4xl ml-8 md:ml-16 lg:ml-24">
-          <h1 className="text-4xl font-bold leading-tight drop-shadow-lg md:text-5xl lg:text-6xl">
-            {activeSlide.title}
+          <h1 className="text-4xl font-bold leading-tight text-white drop-shadow-lg md:text-5xl lg:text-6xl">
+            {activeSlide.title === "Vloeren en wanden die spreken" ? (
+              <>
+                Vloeren en wanden die<br />
+                spreken
+              </>
+            ) : (
+              activeSlide.title
+            )}
           </h1>
-          <p className="mt-4 text-xl font-medium drop-shadow-md md:text-2xl">
-            {activeSlide.subtitle}
-          </p>
+          {activeSlide.subtitle && (
+            <p className="mt-4 text-xl font-medium text-white drop-shadow-md md:text-2xl">
+              {activeSlide.subtitle}
+            </p>
+          )}
         </div>
       </main>
 

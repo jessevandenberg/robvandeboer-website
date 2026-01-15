@@ -143,7 +143,7 @@ const Assortiment: React.FC = () => {
           <h2 className="mb-4 text-4xl font-bold text-black md:text-5xl">
             Dealerschappen
           </h2>
-          <p className="mb-12 max-w-3xl text-lg text-gray-700">
+          <p className="mb-12 max-w-3xl text-lg text-gray-900">
             Wij werken samen met een zorgvuldig geselecteerd netwerk van
             gespecialiseerde dealers. Zij staan garant voor kwaliteit, service
             en vakmanschap.
@@ -314,7 +314,7 @@ const Assortiment: React.FC = () => {
           <h2 className="mb-4 text-4xl font-bold text-black md:text-5xl">
             Kom bij ons langs
           </h2>
-          <p className="mb-8 text-lg text-gray-700">
+          <p className="mb-8 text-lg text-gray-900">
             Bezoek onze showroom en ontdek zelf ons uitgebreide assortiment
             tegels en producten van topkwaliteit.
           </p>
@@ -330,7 +330,7 @@ const Assortiment: React.FC = () => {
             </div>
             <div>
               <h3 className="mb-4 text-2xl font-semibold">openingstijden</h3>
-              <div className="space-y-2 text-gray-700">
+              <div className="space-y-2 text-gray-900">
                 <div className="flex justify-between">
                   <span>maandag</span>
                   <span>13:00-17:30</span>
@@ -360,7 +360,7 @@ const Assortiment: React.FC = () => {
                   <span>gesloten</span>
                 </div>
               </div>
-              <p className="mt-6 text-gray-700">
+              <p className="mt-6 text-gray-900">
                 Adres: Kantsingel 10, 5349 AJ Oss
               </p>
             </div>
