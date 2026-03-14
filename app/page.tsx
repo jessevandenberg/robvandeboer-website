@@ -102,20 +102,59 @@ const Home: React.FC = () => {
           fill
           priority
           quality={100}
-          className="object-cover"
+          className="object-cover scale-100"
           sizes="100vw"
         />
       </div>
+
+
+      {/* Hoofdcontent - Tekst boven de buttons */}
+      <main className="relative z-10 flex h-full w-full flex-col justify-center px-4 md:px-16 lg:px-24">
+        <div 
+          className="max-w-4xl md:ml-16 lg:ml-24"
+          style={{
+            marginLeft: '8px',
+            marginBottom: '32px',
+            transform: 'translateY(-64px)',
+          }}
+        >
+          <h1 className="text-2xl font-bold leading-tight text-white drop-shadow-lg sm:text-4xl md:text-5xl lg:text-6xl">
+            {activeSlide.title === "Vloeren en wanden die spreken" ? (
+              <>
+                Vloeren en wanden die<br />
+                spreken
+              </>
+            ) : (
+              activeSlide.title
+            )}
+          </h1>
+          {activeSlide.subtitle && (
+            <p className="mt-3 text-base font-medium text-white drop-shadow-md sm:mt-4 sm:text-lg md:text-xl lg:text-2xl">
+              {activeSlide.subtitle}
+            </p>
+          )}
+        </div>
+      </main>
 
       {/* Navigatiepijl links */}
       <button
         type="button"
         onClick={handlePrevious}
-        className="group absolute left-4 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border-2 border-white/80 bg-black/50 text-white backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white/20 hover:border-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-black active:scale-95 md:left-6 md:h-14 md:w-14"
+        className="group absolute top-1/2 z-20 flex items-center justify-center rounded-full border-2 border-white/80 bg-black/50 text-white backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white/20 hover:border-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-black active:scale-95"
+        style={{
+          left: '16px',
+          width: '40px',
+          height: '40px',
+          transform: 'translateY(-50%)',
+        }}
         aria-label="Vorige dia"
       >
         <svg
-          className="h-6 w-6 transition-transform duration-300 group-hover:-translate-x-0.5 md:h-7 md:w-7"
+          className="transition-transform duration-300 group-hover:-translate-x-0.5"
+          style={{
+            width: '20px',
+            height: '20px',
+          }}
           fill="none"
           stroke="currentColor"
           strokeWidth="2.5"
@@ -134,11 +173,21 @@ const Home: React.FC = () => {
       <button
         type="button"
         onClick={handleNext}
-        className="group absolute right-4 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border-2 border-white/80 bg-black/50 text-white backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white/20 hover:border-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-black active:scale-95 md:right-6 md:h-14 md:w-14"
+        className="group absolute top-1/2 z-20 flex items-center justify-center rounded-full border-2 border-white/80 bg-black/50 text-white backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white/20 hover:border-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-black active:scale-95"
+        style={{
+          right: '16px',
+          width: '40px',
+          height: '40px',
+          transform: 'translateY(-50%)',
+        }}
         aria-label="Volgende dia"
       >
         <svg
-          className="h-6 w-6 transition-transform duration-300 group-hover:translate-x-0.5 md:h-7 md:w-7"
+          className="transition-transform duration-300 group-hover:translate-x-0.5"
+          style={{
+            width: '20px',
+            height: '20px',
+          }}
           fill="none"
           stroke="currentColor"
           strokeWidth="2.5"
@@ -153,29 +202,14 @@ const Home: React.FC = () => {
         </svg>
       </button>
 
-      {/* Hoofdcontent */}
-      <main className="relative z-10 flex h-full w-full flex-col justify-center px-4 md:px-16 lg:px-24">
-        <div className="max-w-4xl ml-4 md:ml-16 lg:ml-24">
-          <h1 className="text-3xl font-bold leading-tight text-white drop-shadow-lg sm:text-4xl md:text-5xl lg:text-6xl">
-            {activeSlide.title === "Vloeren en wanden die spreken" ? (
-              <>
-                Vloeren en wanden die<br />
-                spreken
-              </>
-            ) : (
-              activeSlide.title
-            )}
-          </h1>
-          {activeSlide.subtitle && (
-            <p className="mt-4 text-lg font-medium text-white drop-shadow-md sm:text-xl md:text-2xl">
-              {activeSlide.subtitle}
-            </p>
-          )}
-        </div>
-      </main>
-
       {/* Dots onderin */}
-      <div className="pointer-events-auto absolute inset-x-0 bottom-16 z-40 flex items-center justify-center gap-2 md:bottom-24">
+      <div 
+        className="pointer-events-auto absolute inset-x-0 z-40 flex items-center justify-center"
+        style={{
+          bottom: '32px',
+          gap: '8px',
+        }}
+      >
         {slides.map((slide, index) => {
           const isActive = index === currentIndex;
 
@@ -184,9 +218,12 @@ const Home: React.FC = () => {
               key={slide.id}
               type="button"
               onClick={() => handleGoToSlide(index)}
-              className={`h-2.5 rounded-full transition-all ${
-                isActive ? "w-6 bg-white" : "w-2.5 bg-white/50 hover:bg-white/80"
-              } focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-black`}
+              className="rounded-full transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+              style={{
+                height: '10px',
+                width: isActive ? '24px' : '10px',
+                backgroundColor: isActive ? 'rgba(255, 255, 255, 1)' : 'rgba(255, 255, 255, 0.5)',
+              }}
               aria-label={`Ga naar dia ${index + 1}`}
               aria-current={isActive ? "true" : undefined}
             />

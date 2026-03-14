@@ -8,7 +8,7 @@ const Contact: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Hero Section */}
-      <section className="relative h-[70vh] w-full overflow-hidden md:h-[65vh]">
+      <section className="relative h-[50vh] w-full overflow-hidden md:h-[65vh]">
         <div className="absolute inset-0">
           <Image
             src={winkel1}
@@ -44,7 +44,7 @@ const Contact: React.FC = () => {
       {/* Heeft u een vraag? Sectie */}
       <section className="bg-gray-100 py-12 px-4 md:py-16 md:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
-          <h2 className="mb-12 text-center text-3xl font-bold text-black md:mb-16 md:text-4xl lg:text-5xl">
+          <h2 className="mb-8 text-center text-3xl font-bold text-black md:mb-16 md:text-4xl lg:text-5xl">
             Heeft u een vraag?
           </h2>
           <div className="grid gap-8 md:grid-cols-3">
@@ -131,12 +131,12 @@ const Contact: React.FC = () => {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-2 md:items-start">
             {/* Afbeelding links */}
-            <div className="relative h-96 overflow-hidden rounded-lg md:h-[500px]">
+            <div className="relative h-64 overflow-hidden rounded-lg md:h-[500px]">
               <Image
                 src={buitenimage}
                 alt="Showroom exterieur"
                 fill
-                className="object-cover"
+                className="object-cover scale-90 md:scale-100"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
@@ -207,11 +207,11 @@ const Contact: React.FC = () => {
                 </div>
 
                 {/* Openingstijden */}
-                <div className="mt-8">
-                  <h3 className="mb-4 text-xl font-semibold text-black md:text-2xl">
+                <div className="mt-6 md:mt-8">
+                  <h3 className="mb-3 text-xl font-semibold text-black md:mb-4 md:text-2xl">
                     openingstijden
                   </h3>
-                  <div className="space-y-2">
+                  <div className="space-y-1.5 md:space-y-2">
                     <div className="flex justify-between">
                       <span>maandag</span>
                       <span>13:00-17:30</span>

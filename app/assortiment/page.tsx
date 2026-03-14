@@ -1,40 +1,118 @@
 "use client";
 
 import Image, { type StaticImageData } from "next/image";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import Footer from "../components/Footer";
 
 import buitenimage from "../images/buitentegelhandel.png";
+import casalgrande from "../images/casalgrande.jpg";
+import ceramicaFlaminia from "../images/ceramica-flaminia.png";
+import ceramicaRondine from "../images/Ceramica-Rondine.png";
 import cottoceramix from "../images/cotteceramix.png";
 import delconca from "../images/delcona.png";
 import flaviker from "../images/flaviker.png";
+import fondovalle from "../images/fondovalle.png";
+import keradom from "../images/Keradom.png";
+import kerateam from "../images/kerateam.png";
+import lafenice from "../images/lafenice.png";
 import mapei from "../images/mapei.png";
 import mosaic from "../images/mosaic.png";
+import panaria from "../images/panaria.png";
 import pastorelli from "../images/pastorelli.png";
 import ragno from "../images/ragno.png";
+import rak from "../images/rak.jpg";
+import revoirParis from "../images/revoir-paris.png";
+import saloni from "../images/saloni.png";
 import tmf from "../images/tmf.png";
 import vloertegels from "../images/vloertegels.png";
 import wandtegel from "../images/muurtegels.png";
 import winkel1 from "../images/winkel 1.png";
 
 const Assortiment: React.FC = () => {
-  const [brandIndex, setBrandIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const [brandsVisible, setBrandsVisible] = useState(4);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   const brands: Array<{ name: string; logo: StaticImageData }> = [
     { name: "RAGNO", logo: ragno },
     { name: "FLAVIKER", logo: flaviker },
     { name: "pastorelli", logo: pastorelli },
     { name: "DEL CONCA", logo: delconca },
+    { name: "REVOIR PARIS", logo: revoirParis },
+    { name: "SALONI", logo: saloni },
+    { name: "CERAMICA RONDINE", logo: ceramicaRondine },
+    { name: "CERAMICA FLAMINIA", logo: ceramicaFlaminia },
+    { name: "RAK", logo: rak },
+    { name: "CASALGRANDE", logo: casalgrande },
+    { name: "PANARIA", logo: panaria },
+    { name: "FONDOVALLE", logo: fondovalle },
+    { name: "KERADOM", logo: keradom },
+    { name: "KERATEAM", logo: kerateam },
+    { name: "LAFENICE", logo: lafenice },
   ];
 
+  const getCurrentBrands = (): Array<{ name: string; logo: StaticImageData }> => {
+    const visibleBrands: Array<{ name: string; logo: StaticImageData }> = [];
+    
+    for (let i = 0; i < brandsVisible; i++) {
+      const index = (currentIndex + i) % brands.length;
+      visibleBrands.push(brands[index]);
+    }
+    
+    return visibleBrands;
+  };
+
+  useEffect(() => {
+    const updateBrandsVisible = (): void => {
+      const width = window.innerWidth;
+      if (width < 768) {
+        // Mobiel: 2 images
+        setBrandsVisible(2);
+      } else {
+        // Laptop/Desktop: 4 images
+        setBrandsVisible(4);
+      }
+    };
+
+    updateBrandsVisible();
+    window.addEventListener("resize", updateBrandsVisible);
+
+    return () => {
+      window.removeEventListener("resize", updateBrandsVisible);
+    };
+  }, []);
+
   const handleBrandNext = (): void => {
-    setBrandIndex((prev) => (prev + 1) % brands.length);
+    setCurrentIndex((prev) => (prev + 1) % brands.length);
   };
 
   const handleBrandPrevious = (): void => {
-    setBrandIndex((prev) => (prev - 1 + brands.length) % brands.length);
+    setCurrentIndex((prev) => (prev - 1 + brands.length) % brands.length);
   };
+
+  const handleMouseEnter = (): void => {
+    setIsPaused(true);
+  };
+
+  const handleMouseLeave = (): void => {
+    setIsPaused(false);
+  };
+
+  useEffect(() => {
+    if (isPaused) {
+      return;
+    }
+
+    const intervalId = window.setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % brands.length);
+    }, 3000);
+
+    return () => {
+      window.clearInterval(intervalId);
+    };
+  }, [isPaused, brands.length]);
 
   return (
     <div className="min-h-screen bg#D9D9D9">
@@ -86,7 +164,7 @@ const Assortiment: React.FC = () => {
                   src={vloertegels}
                   alt="Vloertegels"
                   fill
-                  className="object-cover"
+                  className="object-cover scale-90 md:scale-100"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
@@ -105,7 +183,7 @@ const Assortiment: React.FC = () => {
                   src={wandtegel}
                   alt="Wandtegels"
                   fill
-                  className="object-cover"
+                  className="object-cover scale-90 md:scale-100"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
@@ -124,7 +202,7 @@ const Assortiment: React.FC = () => {
                   src={mosaic}
                   alt="Mozaïek"
                   fill
-                  className="object-cover"
+                  className="object-cover scale-90 md:scale-100"
                   sizes="(max-width: 768px) 100vw, 33vw"
                 />
               </div>
@@ -163,9 +241,10 @@ const Assortiment: React.FC = () => {
                 />
               </div>
               <p className="mb-6 grow text-sm text-gray-600">
-                Tegeldealer Cottoceramix levert een zorgvuldig samengesteld
-                assortiment keramische tegels, met focus op kwaliteit en
-                betrouwbaarheid.
+              Cottoceramix is al 25 jaar een vertrouwde groothandel in wand- en vloertegels 
+              die een ruimte nét dat beetje extra geven. We combineren een breed assortiment,
+               van eigentijdse collecties tot opvallende designs, met een scherp oog voor kwaliteit 
+               en toepasbaarheid.
               </p>
               <a
                 href="https://www.instagram.com/cottoceramix/"
@@ -197,8 +276,10 @@ const Assortiment: React.FC = () => {
                 />
               </div>
               <p className="mb-6 grow text-sm text-gray-600">
-                The Mosaic Factory levert een uitgebreid, zorgvuldig geselecteerd
-                assortiment mozaïektegels van hoge kwaliteit en vakmanschap.
+              Al meer dan 30 jaar is UCI Union Ceramics International B.V. specialist
+               in het ontwerpen en distribueren van glas- en keramiekmozaïek. Met ons 
+               merk The Mosaic Factory, kortweg TMF, leveren we mozaïek in meer dan 40 
+               landen wereldwijd.
               </p>
               <a
                 href="https://www.instagram.com/tmf_mosaic/"
@@ -230,8 +311,9 @@ const Assortiment: React.FC = () => {
                 />
               </div>
               <p className="mb-6 grow text-sm text-gray-600">
-                Mapei levert hoogwaardige bouw- en tegelproducten, gespecialiseerd
-                in lijmen, voegen en duurzame oplossingen voor tegels.
+              Mapei is nu een van 's werelds grootste producenten van chemische producten 
+              voor de bouwindustrie. Wij bieden duurzame kwaliteitsproducten die rekening
+               houden met de planeet en de mensen. 
               </p>
               <a
                 href="https://www.instagram.com/mapei_nederland/"
@@ -255,20 +337,24 @@ const Assortiment: React.FC = () => {
       </section>
 
       {/* Onze Merken Sectie */}
-      <section className="bg-white py-20 px-4 md:py-32 md:px-8 lg:px-16">
+      <section className="bg-white py-12 px-4 sm:py-16 md:py-32 md:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
-          <h2 className="mb-16 text-4xl font-bold text-black md:text-5xl">
+          <h2 className="mb-8 text-3xl font-bold text-black sm:mb-12 sm:text-4xl md:mb-16 md:text-5xl">
             onze merken
           </h2>
-          <div className="relative">
+          <div
+            className="relative px-8 sm:px-12 md:px-0"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
             <button
               type="button"
               onClick={handleBrandPrevious}
-              className="absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-gray-200 p-2 transition hover:bg-gray-300"
-              aria-label="Vorige merk"
+              className="group absolute left-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-2 shadow-md transition-all hover:bg-gray-100 hover:scale-110 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 sm:p-2.5 md:p-3 md:shadow-lg"
+              aria-label="Vorige groep merken"
             >
               <svg
-                className="h-6 w-6"
+                className="h-4 w-4 text-gray-700 transition-transform group-hover:-translate-x-0.5 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-7 lg:w-7"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -276,39 +362,45 @@ const Assortiment: React.FC = () => {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
+                  strokeWidth={2.5}
                   d="M15.75 19.5L8.25 12l7.5-7.5"
                 />
               </svg>
             </button>
-            <div className="flex items-center justify-center gap-8 overflow-hidden md:gap-16">
-              {brands.map((brand, index) => (
-                <div
-                  key={brand.name}
-                  className={`shrink-0 transition-opacity ${
-                    index === brandIndex ? "opacity-100" : "opacity-50"
-                  }`}
-                >
-                  <div className="relative h-20 w-24 flex items-center justify-center rounded md:h-32 md:w-40">
-                    <Image
-                      src={brand.logo}
-                      alt={`${brand.name} logo`}
-                      fill
-                      className="object-contain"
-                      sizes="(max-width: 768px) 96px, 160px"
-                    />
-                  </div>
-                </div>
-              ))}
+            <div className="mx-auto w-full overflow-hidden max-w-[calc(100vw-2rem)] md:max-w-[600px] lg:max-w-[800px] xl:max-w-[1000px] 2xl:max-w-[1200px]">
+              <div
+                ref={scrollContainerRef}
+                className="relative flex items-center justify-center gap-4 sm:gap-5 md:gap-6 lg:gap-8 xl:gap-10"
+              >
+                {getCurrentBrands().map((brand, index) => {
+                  const brandIndex = (currentIndex + index) % brands.length;
+                  return (
+                    <div
+                      key={`${brand.name}-${brandIndex}`}
+                      className="shrink-0 transition-opacity duration-300 ease-in-out"
+                    >
+                      <div className="relative h-20 w-24 flex items-center justify-center rounded sm:h-24 sm:w-28 md:h-28 md:w-32 lg:h-32 lg:w-40 xl:h-40 xl:w-48 2xl:h-48 2xl:w-56">
+                        <Image
+                          src={brand.logo}
+                          alt={`${brand.name} logo`}
+                          fill
+                          className="object-contain"
+                          sizes="(max-width: 640px) 96px, (max-width: 768px) 112px, (max-width: 1024px) 128px, (max-width: 1280px) 160px, (max-width: 1536px) 192px, 224px"
+                        />
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
             <button
               type="button"
               onClick={handleBrandNext}
-              className="absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-gray-200 p-2 transition hover:bg-gray-300"
-              aria-label="Volgende merk"
+              className="group absolute right-0 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white p-2 shadow-md transition-all hover:bg-gray-100 hover:scale-110 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 sm:p-2.5 md:p-3 md:shadow-lg"
+              aria-label="Volgende groep merken"
             >
               <svg
-                className="h-6 w-6"
+                className="h-4 w-4 text-gray-700 transition-transform group-hover:translate-x-0.5 sm:h-5 sm:w-5 md:h-6 md:w-6 lg:h-7 lg:w-7"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -316,7 +408,7 @@ const Assortiment: React.FC = () => {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
+                  strokeWidth={2.5}
                   d="M8.25 4.5l7.5 7.5-7.5 7.5"
                 />
               </svg>
@@ -341,7 +433,7 @@ const Assortiment: React.FC = () => {
                 src={buitenimage}
                 alt="Showroom exterieur"
                 fill
-                className="object-cover"
+                className="object-cover scale-90 md:scale-100"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>

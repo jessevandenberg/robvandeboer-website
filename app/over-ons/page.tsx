@@ -9,7 +9,7 @@ const OverOns: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-100">
       {/* Hero Section */}
-      <section className="relative h-[70vh] w-full overflow-hidden md:h-[65vh]">
+      <section className="relative h-[50vh] w-full overflow-hidden md:h-[65vh]">
         <div className="absolute inset-0">
           <Image
             src={winkel1}
@@ -43,11 +43,11 @@ const OverOns: React.FC = () => {
       </section>
 
       {/* Eerste deel Content Sectie */}
-      <section className="bg-gray-100 py-20 px-4 md:py-32 md:px-8 lg:px-16">
+      <section className="bg-gray-100 py-12 px-4 md:py-32 md:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-16 md:grid-cols-2 md:items-center md:gap-24">
+          <div className="grid gap-8 md:grid-cols-2 md:items-center md:gap-24">
             <div>
-              <div className="space-y-10 text-base leading-loose text-gray-900 md:text-lg md:leading-9">
+              <div className="space-y-6 text-base leading-loose text-gray-900 md:space-y-10 md:text-lg md:leading-9">
                 <div>
                   <h3 className="mb-3 text-xl font-semibold text-black md:text-2xl">
                     Van Tegelboerke tot superspecialist
@@ -73,12 +73,12 @@ const OverOns: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="relative h-96 overflow-hidden rounded-lg md:h-[500px]">
+            <div className="relative h-64 overflow-hidden rounded-lg md:h-[500px]">
               <Image
                 src={overOns2}
                 alt="Showroom met tegelassortiment"
                 fill
-                className="object-cover"
+                className="object-cover scale-90 md:scale-100"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
@@ -87,20 +87,20 @@ const OverOns: React.FC = () => {
       </section>
 
       {/* Tweede deel Content Sectie met grijze achtergrond */}
-      <section className="bg-[#D9D9D9] py-20 px-4 md:py-32 md:px-8 lg:px-16">
+      <section className="bg-[#D9D9D9] py-12 px-4 md:py-32 md:px-8 lg:px-16">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-16 md:grid-cols-2 md:items-center md:gap-24">
-            <div className="relative h-96 overflow-hidden rounded-lg md:h-[500px]">
+          <div className="grid gap-8 md:grid-cols-2 md:items-center md:gap-24">
+            <div className="relative h-64 overflow-hidden rounded-lg md:h-[500px]">
               <Image
                 src={overOns1}
                 alt="Tegelassortiment close-up"
                 fill
-                className="object-cover"
+                className="object-cover scale-90 md:scale-100"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
             <div>
-              <div className="space-y-10 text-base leading-loose text-gray-900 md:text-lg md:leading-9">
+              <div className="space-y-6 text-base leading-loose text-gray-900 md:space-y-10 md:text-lg md:leading-9">
                 <div>
                   <h3 className="mb-3 text-xl font-semibold text-black md:text-2xl">
                     Advies en service
