@@ -117,7 +117,7 @@ const Assortiment: React.FC = () => {
   return (
     <div className="min-h-screen bg#D9D9D9">
       {/* Hero Section met "assortiment" */}
-      <section className="relative h-[70vh] w-full overflow-hidden md:h-[65vh]">
+      <section className="relative h-[50vh] w-full overflow-hidden md:h-[65vh]">
         <div className="absolute inset-0">
           <Image
             src={winkel1}
@@ -137,9 +137,9 @@ const Assortiment: React.FC = () => {
           </h1>
         </div>
 
-        {/* Diagonale overlay onderaan met clip-path (punt wijst naar beneden) */}
+        {/* Diagonale overlay onderaan met clip-path (punt wijst naar beneden) - op mobiel hoger zodat V de onderkant raakt */}
         <div
-          className="absolute bottom-0 left-0 right-0 z-10 h-[25vh] pointer-events-none"
+          className="absolute bottom-[-8px] left-0 right-0 z-10 min-h-[120px] pointer-events-none h-[45%] md:h-[25vh]"
           style={{
               clipPath:
                 "polygon(0% 100%, 0% 35%, 5% 38%, 10% 42%, 20% 48%, 30% 55%, 40% 62%, 50% 70%, 60% 62%, 70% 55%, 80% 48%, 90% 42%, 95% 38%, 100% 35%, 100% 100%)",
