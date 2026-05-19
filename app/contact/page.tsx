@@ -131,7 +131,7 @@ const Contact: React.FC = () => {
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-8 md:grid-cols-2 md:items-start">
             {/* Afbeelding links */}
-            <div className="relative h-64 overflow-hidden rounded-lg md:h-[500px]">
+            <div className="relative h-[280px] overflow-hidden rounded-lg md:h-[460px] md:max-w-[500px]">
               <Image
                 src={buitenimage}
                 alt="Showroom exterieur"
@@ -143,7 +143,10 @@ const Contact: React.FC = () => {
 
             {/* Contact informatie rechts */}
             <div>
-              <h2 className="mb-6 text-3xl font-bold text-black md:text-4xl lg:text-5xl">
+              <h2
+                className="mb-6 font-bold text-black"
+                style={{ fontSize: "28px" }}
+              >
                 showroom
               </h2>
               <div className="space-y-4 text-base leading-relaxed text-gray-900 md:text-lg">
@@ -208,37 +211,68 @@ const Contact: React.FC = () => {
 
                 {/* Openingstijden */}
                 <div className="mt-6 md:mt-8">
-                  <h3 className="mb-3 text-xl font-semibold text-black md:mb-4 md:text-2xl">
+                  <h3
+                    className="mb-3 font-semibold text-black md:mb-4"
+                    style={{ fontSize: "20px" }}
+                  >
                     openingstijden
                   </h3>
                   <div className="space-y-1.5 md:space-y-2">
-                    <div className="flex justify-between">
-                      <span>maandag</span>
-                      <span>13:00-17:30</span>
+                    <div className="flex items-baseline gap-2">
+                      <span className="shrink-0">maandag</span>
+                      <span
+                        className="min-w-[8px] flex-1 border-b border-dotted border-gray-500"
+                        aria-hidden="true"
+                      />
+                      <span className="shrink-0">13:00-17:30</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>dinsdag</span>
-                      <span>9:00-17:30</span>
+                    <div className="flex items-baseline gap-2">
+                      <span className="shrink-0">dinsdag</span>
+                      <span
+                        className="min-w-[8px] flex-1 border-b border-dotted border-gray-500"
+                        aria-hidden="true"
+                      />
+                      <span className="shrink-0">9:00-17:30</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>woensdag</span>
-                      <span>9:00-17:30</span>
+                    <div className="flex items-baseline gap-2">
+                      <span className="shrink-0">woensdag</span>
+                      <span
+                        className="min-w-[8px] flex-1 border-b border-dotted border-gray-500"
+                        aria-hidden="true"
+                      />
+                      <span className="shrink-0">9:00-17:30</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>donderdag</span>
-                      <span>9:00-17:30</span>
+                    <div className="flex items-baseline gap-2">
+                      <span className="shrink-0">donderdag</span>
+                      <span
+                        className="min-w-[8px] flex-1 border-b border-dotted border-gray-500"
+                        aria-hidden="true"
+                      />
+                      <span className="shrink-0">9:00-17:30</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>vrijdag</span>
-                      <span>9:00-17:30</span>
+                    <div className="flex items-baseline gap-2">
+                      <span className="shrink-0">vrijdag</span>
+                      <span
+                        className="min-w-[8px] flex-1 border-b border-dotted border-gray-500"
+                        aria-hidden="true"
+                      />
+                      <span className="shrink-0">9:00-17:30</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>zaterdag</span>
-                      <span>9:00-16:00</span>
+                    <div className="flex items-baseline gap-2">
+                      <span className="shrink-0">zaterdag</span>
+                      <span
+                        className="min-w-[8px] flex-1 border-b border-dotted border-gray-500"
+                        aria-hidden="true"
+                      />
+                      <span className="shrink-0">9:00-16:00</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span>zondag</span>
-                      <span>gesloten</span>
+                    <div className="flex items-baseline gap-2">
+                      <span className="shrink-0">zondag</span>
+                      <span
+                        className="min-w-[8px] flex-1 border-b border-dotted border-gray-500"
+                        aria-hidden="true"
+                      />
+                      <span className="shrink-0">gesloten</span>
                     </div>
                   </div>
                 </div>

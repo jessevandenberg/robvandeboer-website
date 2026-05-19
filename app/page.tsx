@@ -6,6 +6,8 @@ import { useEffect, useState } from "react";
 
 import slideImageBathroom from "./images/homepage3.png";
 import slideImageStairs from "./images/homepage1.png";
+import livingroom from "./images/homepage 3.jpg";
+import bathroom from "./images/homepage 4.png";
 
 type Slide = {
   id: number;
@@ -18,8 +20,8 @@ type Slide = {
 const slides: Slide[] = [
   {
     id: 1,
-    title: "Vloeren en wanden die spreken",
-    subtitle: "",
+    title: "Vloeren en wanden",
+    subtitle: "die spreken",
     image: slideImageBathroom,
     alt: "Badkamer met groene tegels en houten wastafelmeubel",
   },
@@ -30,13 +32,27 @@ const slides: Slide[] = [
     image: slideImageStairs,
     alt: "Trap met luxe marmeren tegels en verlichting",
   },
+  {
+    id: 3,
+    title: "Sereniteit",
+    subtitle: "ervaar rust en luxe van vloer tot wand",
+    image: livingroom,
+    alt: "Livingroom met houten vloer en houten wanden",
+  },
+  {
+    id: 4,
+    title: "verfijnde vloer- en wandbehang",
+    subtitle: "Stijl op de vierkante meter",
+    image: bathroom,
+    alt: "",
+  },
 ];
 
 const AUTO_SLIDE_INTERVAL_MS = 7000;
+const SLIDE_COUNT = slides.length;
 
 const Home: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const [isPaused, setIsPaused] = useState<boolean>(false);
 
   const handleNext = (): void => {
     setCurrentIndex((previousIndex) => {
@@ -64,35 +80,23 @@ const Home: React.FC = () => {
     setCurrentIndex(index);
   };
 
-  const handleMouseEnter = (): void => {
-    setIsPaused(true);
-  };
-
-  const handleMouseLeave = (): void => {
-    setIsPaused(false);
-  };
-
   useEffect(() => {
-    if (isPaused) {
-      return;
-    }
-
     const intervalId = window.setInterval(() => {
-      handleNext();
+      setCurrentIndex((previousIndex) =>
+        previousIndex === SLIDE_COUNT - 1 ? 0 : previousIndex + 1
+      );
     }, AUTO_SLIDE_INTERVAL_MS);
 
     return () => {
       window.clearInterval(intervalId);
     };
-  }, [isPaused]);
+  }, []);
 
   const activeSlide = slides[currentIndex];
 
   return (
     <div
       className="relative flex h-screen w-full overflow-hidden bg-black text-white"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
     >
       {/* Achtergrondafbeelding */}
       <div className="absolute inset-0">
